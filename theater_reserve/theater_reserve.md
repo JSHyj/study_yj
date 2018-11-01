@@ -6,6 +6,7 @@ ticket.jsp
 ------------
 영화표 설정. submit -> reserve.jsp
 
+<br><br><br><br><br>
 
 
 reserve.jsp
@@ -29,6 +30,7 @@ JSTL 반복문 버튼 50개 생성. 10의 배수 줄바꿈.
 	</c:choose>
 </c:forEach>
 ```
+<br><br><br><br><br>
 
 
 스크립트 .ButtonSeat 클릭 시 해당버튼 선택자 선언. 미리 만들어둔 영화표 수를 담고 있는 클래스 가져옴. int 파싱해야함.
@@ -60,7 +62,7 @@ JSTL 반복문 버튼 50개 생성. 10의 배수 줄바꿈.
 </script>
 ```
 
-
+<br><br><br><br><br>
 
 success.jsp
 -----------------
