@@ -1,26 +1,32 @@
 package com.reserve.controller;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import lombok.extern.log4j.Log4j;
 
 /**
  * Handles requests for the application home page.
  */
 @Controller
+@Log4j
 public class HomeController {
 	
+	@GetMapping("/")
+	public String ticket() {return "/ticket";}
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-
-		//주석
+	@GetMapping("/reserve")
+	public void reserve(Model model, @RequestParam("ticket")int ticket) {
+		log.info("reserve mapping-----------------");
 		
-		return "home";
+		model.addAttribute("ticket", ticket);
+		
 	}
+	
+	
 	
 }
